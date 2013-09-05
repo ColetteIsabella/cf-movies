@@ -5,3 +5,5 @@
 <h2>My Favorite</h2>
 <p>My favorite movie is <%= @best_movie.title %></p>
 <p>It was released in <%= @best_movie.year %></p>
+
+<%= link_to "Movies", movies_path(@movies) %>
