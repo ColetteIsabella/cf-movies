@@ -7,10 +7,17 @@
       <th>Year</th>
       <th>Votes</th>
     </tr>
-  </thead>
-<tbody>
+    </thead>
+  <tbody>
+  <% Movie.find_each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.genre%></td>
+        <td><%= movie.year%></td>
+        <td><%= movie.votes.count %></td>
+        <% end %>
 
-      </tbody>
+   </tbody>
 </table>
 
 <%= link_to "Home", root_path %>
